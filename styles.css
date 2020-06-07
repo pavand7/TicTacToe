@@ -1,0 +1,168 @@
+body {
+  background-color: #1a756b;
+  text-align: center;
+}
+
+/* Main- heading */
+h1 {
+  color: #00ffc8;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4rem;
+  margin: 5%;
+}
+
+/* Heading when it is player1's turn */
+.player1 {
+  color: #a4bd2a;
+}
+
+/* Heading when it is player2's turn */
+.player2 {
+  color: #717cd1;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 50%;
+}
+
+/* Making the table responsive */
+@media screen and (max-width: 1100px) {
+  table {
+    width: 90%;
+  }
+}
+
+/* hide table when the page loads */
+.hide {
+  display: none;
+}
+
+/* Making a tictactoe board by removing these borders from the table */
+#zero, #one, #two {
+  border-top: none;
+}
+
+#zero, #three, #six {
+  border-left: none;
+}
+
+#six, #seven, #eight {
+  border-bottom: none;
+}
+
+#two, #five, #eight {
+  border-right: none;
+}
+
+/* Each cell in table */
+td {
+  border: 5px solid #fff;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150px;
+  height: 200px;
+  padding-top: 10px;
+  position: relative;
+  width: 200px;
+}
+
+/* cursor when Mouseover on empty square */
+.cursor {
+  cursor: pointer;
+}
+
+/* cursor when Mouseover on filled square */
+.cursorNotAllowed {
+  cursor: not-allowed;
+}
+
+/* Animation when either player wins */
+.blink-bg {
+		animation: blinkingBackground 1s 2;
+}
+
+@keyframes blinkingBackground{
+		0%		{ background-color: #995555; color: #fff; text-shadow: 1px 1px 3px red;}
+    25%	{ background-color: #000; color: red; text-shadow: 1px 1px 3px black;}
+    50%   { background-color: #995555; color: #fff; text-shadow: 1px 1px 3px red;}
+    75%	{ background-color: #000; color: red; text-shadow: 1px 1px 3px black;}
+		100%	{ background-color: #995555; color: #fff; text-shadow: 1px 1px 3px red;}
+}
+
+/* Styling the win pattern */
+.win-bg {
+  background-color: #995555;
+  color: #e0828d;
+  text-shadow: 2px 2px black;
+}
+
+/* style of the square when player1 clicks on it in his turn */
+.player1Mouse {
+  background-color: #ccc208;
+  color: red;
+}
+
+/* style of the square when player2 clicks on it in his turn */
+.player2Mouse {
+  background-color: #09d6cf;
+  color: purple;
+}
+
+/* style when mouseOver on a square */
+.currentSquare {
+  background-color: #234567;
+  color: rgba(245, 147, 66, 0.8);
+}
+
+/* styling the outer div */
+body > div {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-left: 10%;
+  text-align: left;
+  width: 30%;
+}
+
+/* Instructions heading */
+h2 {
+  color: #d68b13;
+  font-family: 'Metal Mania', cursive;
+  text-decoration: underline;
+}
+
+/* list items */
+li {
+  color: #d998bf;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  list-style-type: none;
+}
+
+/* custom bullets */
+ul li::before {
+  color: #74b8cf;
+  content: "> ";
+  margin-left: -1em;
+  width: 1rem;
+}
+
+/* inner div */
+li div {
+  display: none;
+}
+
+/* keyboard controls */
+li ul li{
+  color: #d94cd9;
+}
+
+/* show/hide controls */
+a {
+  color: #cf7474;
+}
+
+/* highlight important keys */
+span {
+  color: white;
+}
